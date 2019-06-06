@@ -1,4 +1,4 @@
-TechCentrix SDK is a Swift framework for connecting mobile app and TechCentrix Bluetooth devices, like clips or wristbands. 
+TechCentrix SDK is a Swift framework for connecting mobile app and TechCentrix Bluetooth devices, like clips or wristbands.
 
 - [TechCentrix SDK](#techcentrix-sdk)
   * [Step 1 - Integrate your backend with TechCentrix backend](#step-1---integrate-your-backend-with-techcentrix-backend)
@@ -45,9 +45,12 @@ platform :ios, '11.0'
 target 'YourTargetName' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  
+
   # Pods for YourTargetName
   pod 'TechCentrixSDK', :git => 'git@bitbucket.org:techcentrix/techcentrix-sdk-ios.git'
+  #You also need to use Firebase
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
 end
 
 # Required as TechCentrix uses Bluejay
@@ -66,6 +69,13 @@ end
 Then, run the following command:
 
 `$ pod install`
+
+#### Firebase
+
+If you have Firebase configured in your project, please skip Step 1.
+1. Configure Firebase in your project as described [here](https://firebase.google.com/docs/ios/setup).
+2. Configure your iOS app in Firebase console - Settings/Cloud Messaging/iOS app configuration. Add *APNs Authentication Key* [Apple Source](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_token-based_connection_to_apns)
+3. If you have *Firebase Server Key* for Android app, please add it to our [TechCentrix Config file](https://sdk.techcentrix.com/quick-start-guide#dictionary), otherwise generate new. Use it for Android project as well.
 
 ### Step 3 - Configure TechCentrix module
 
