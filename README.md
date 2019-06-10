@@ -52,18 +52,13 @@ target 'YourTargetName' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
 end
+```
 
-# Required as TechCentrix uses Bluejay
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    if ['XCGLogger'].include? target.name
-      target.build_configurations.each do |config|
-        config.build_settings['SWIFT_VERSION'] = '4.2'
-      end
-    end
-  end
-end
+As our SDK uses Firebase to receive push notifications, don't forget to add Firebase pods to your Podfile.
 
+```
+pod 'Firebase/Core'
+pod 'Firebase/Messaging'
 ```
 
 Then, run the following command:
@@ -152,27 +147,33 @@ If your application has a "sign out" option, please call our [TechCentrixSDK.sig
 
 ### Step 5 - Passing TechCentrix's push notifications
 
-Your app will need to pass push notifications to our TechCentrix SDK. You can recognize them by searching for key "tcx" in a JSON. Example of push notification body:
+Both iOS & Android app use Firebase to receive push notifications.
 
-```
-"tcx": {
-    ...
-}
-```
-
-Pass main JSON object (including *"tcx"* key) as below:
+Your app will need to pass push notifications to our TechCentrix SDK. You can recognize them using *TechCentrixSDK.isTechCentrixPush(...)* method.
 
 ```
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
 		guard let userInfo: [String: Any] = userInfo as? [String: Any] else {
 			completionHandler(.failed)
 			return }
-		TechCentrixSDK.handlePush(with: userInfo) { (_) in
-			completionHandler(.newData)
-		}
+
+      if TechCentrixSDK.isTechCentrixPush(userInfo: info) {
+  			TechCentrixSDK.handlePush(with: info) { _ in
+  				completionHandler(.newData)
+  			}
+  		}
 	}
 ```
 
+You also need to pass FCM Token to our SDK.
+
+```
+extension AppDelegate: MessagingDelegate {
+	func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+		TechCentrixSDK.storeFirebaseRegistrationID(token: fcmToken)
+	}
+}
+```
 
 ## API Documentation
 

@@ -10,25 +10,33 @@ import UIKit
 import TechCentrixSDK
 
 class ViewController: UIViewController {
-
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
 		let colors: TechCentrixSDK.Configuration.Colors = TechCentrixSDK.Configuration.Colors(primary: UIColor.red, secondary: UIColor.purple)
 		let images: TechCentrixSDK.Configuration.Images = TechCentrixSDK.Configuration.Images()
 		
-		let configuration: TechCentrixSDK.Configuration = TechCentrixSDK.Configuration(apiToken: "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJST0xFX01PQklMRSIsInN1YiI6IlJPTEVfTU9CSUxFIiwiYXV0aCI6WyJST0xFX01PQklMRSJdLCJ0eXBlIjoiYWNjZXNzIiwiY3VzdG9tZXIiOiJkZW1vIiwiZXhwIjoxNjQ4OTk1NTM5fQ.MD3jcfZuZ_d5uSzfCqO_CWz3FhUaZ9nZSUuiOIaoomdCXyNEc-WdIfD8kcbhQpJKTbCHACSW2fs4DM8QidxLIg", hostName: "Example", colors: colors, images: images)
+		let configuration: TechCentrixSDK.Configuration = TechCentrixSDK.Configuration(apiToken: "API TOKEN", hostName: "Example", colors: colors, images: images)
 		
 		TechCentrixSDK.configure(with: configuration)
 		
+		UIApplication.shared.registerForRemoteNotifications()
+		
 		if !TechCentrixSDK.isSignedIn() {
-			TechCentrixSDK.signIn(with: "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI5YjNlNDgyMi05YjI1LTQyNmUtYjdmZi1mNjg1YzFlODY4M2IiLCJzdWIiOiJCYXJ0MSIsImF1dGgiOlsiUk9MRV9VU0VSIl0sInR5cGUiOiJhY2Nlc3MiLCJleHAiOjE1NjAxODE2ODh9.cyA1aVes5EJRDrHrg-XjQADkpaB1VcA4LMCgz9DnFVHfzX3tyHQ8D366Y5BRlX10OsIpbN7mmfSjDdx-USYrWg") { (success: Bool) in
+			TechCentrixSDK.signIn(with: "ONETIMETOKEN") { (success: Bool) in
 				if success {
 					TechCentrixSDK.present(on: self)
 				} else {
 					print("Sign in failed")
 				}
 			}
-		} else {
+		}
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		if TechCentrixSDK.isSignedIn() {
 			TechCentrixSDK.present(on: self)
 		}
 	}

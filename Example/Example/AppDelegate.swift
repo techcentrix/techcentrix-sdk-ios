@@ -31,8 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			return
 		}
 		
-		TechCentrixSDK.handlePush(with: info) { _ in
-			completionHandler(.newData)
+		if TechCentrixSDK.isTechCentrixPush(userInfo: info) {
+			TechCentrixSDK.handlePush(with: info) { _ in
+				completionHandler(.newData)
+			}
 		}
 	}
 	
