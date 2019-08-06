@@ -35,6 +35,18 @@ CocoaPods is a dependency manager for Swift/Objective-C, which automates and sim
 
 To access the CocoaPods repository, contact [TechCentrix](https://techcentrix.com).
 
+Once you got access to our repository, copy or generate SSH key to your BitBucket profile. If you created your key with a different name, or if you are adding an existing key that has a different name, replace *id_rsa* in the command with the name of your private key file.
+
+```
+pbcopy < ~/.ssh/id_rsa.pub
+```
+
+Add your SSH private key to the ssh-agent and store your passphrase in the keychain.
+
+```
+ssh-add -K ~/.ssh/id_rsa
+```
+
 #### Podfile
 
 To integrate TechCentrix into your Xcode project using CocoaPods, specify it in your Podfile:
@@ -96,7 +108,6 @@ Item | Description | Image  | Screenshot
 --- | --- | --- | ---
 productImage | Name of an image, that is used on a list of clips |  <img src="website/assets/productImage.png?raw=true" width="200"> | <img src="website/ProductImage.png?raw=true" width="200">
 productImageAddNew | Name of an image, that is used on a list of clips | <img src="website/assets/productImageAddNew.png?raw=true" width="200"> | <img src="website/ProductImageAddNew.png?raw=true" width="200">
-productImageLED | Name of an image, that is presents LED display. | <img src="website/assets/productImageLED.png?raw=true" width="200"> | <img src="website/ProductImageLED.png?raw=true" width="200">
 productImagePairing | Name of an image, that is used on a pairing screen | <img src="website/assets/productImagePairing.png?raw=true" width="200"> | <img src="website/ProductImagePairing.png?raw=true" width="200">
 productImagePairingOnOff | Name of an image, that is used on a pairing screen with zoomed On/Off button | <img src="website/assets/productImagePairingOnOff.png?raw=true" width="200"> | <img src="website/ProductImagePairingOnOff.png?raw=true" width="200">
 
@@ -106,7 +117,6 @@ Example:
 let colors: TechCentrixSDK.Configuration.Colors = TechCentrixSDK.Configuration.Colors(primary: UIColor.yourPrimaryColor, secondary: UIColor.yourSecondaryColor)
 let images: TechCentrixSDK.Configuration.Images = TechCentrixSDK.Configuration.Images(product: UIImage(named: "productImage"),
 												productAdd: UIImage(named: "productImageAddNew"),
-												productLED: UIImage(named: "productImageLED"),
 												pairing1: UIImage(named: "productImagePairing"),
 												pairing2: UIImage(named: "productImagePairingOnOff"))
 let configuration: TechCentrixSDK.Configuration = TechCentrixSDK.Configuration(apiToken: "Mobile.API.Token", hostName: "The Bekan", productName: "Display", colors: colors, images: images)
