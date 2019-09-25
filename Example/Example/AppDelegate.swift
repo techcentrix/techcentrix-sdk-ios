@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
 	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UNUserNotificationCenter.current().delegate = self
 		self.configureFirebase()
 		return true
 	}
@@ -48,4 +49,10 @@ extension AppDelegate: MessagingDelegate {
 	func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
 		TechCentrixSDK.storeFirebaseRegistrationID(token: fcmToken)
 	}
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        TechCentrixSDK.handleUserNotification(with: response, completion: completionHandler)
+    }
 }

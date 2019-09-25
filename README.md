@@ -84,6 +84,18 @@ If you have Firebase configured in your project, please skip Step 1.
 2. Configure your iOS app in Firebase console - Settings/Cloud Messaging/iOS app configuration. Add *APNs Authentication Key* [Apple Source](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_token-based_connection_to_apns)
 3. If you have *Firebase Server Key* for Android app, please add it to our [TechCentrix Config file](https://sdk.techcentrix.com/quick-start-guide#dictionary), otherwise generate new. Use it for Android project as well.
 
+#### Info.plist
+
+There are required Info.plist keys:
+
+* `NSCameraUsageDescription`
+* `NSBluetoothPeripheralUsageDescription`
+* `NSBluetoothAlwaysUsageDescription`
+* `NSLocationWhenInUseUsageDescription`
+* `NSLocationAlwaysAndWhenInUseUsageDescription`
+* `NSLocationAlwaysUsageDescription`
+* `UIBackgroundModes` with `remote-notification` and `bluetooth-central`
+
 ### Step 3 - Configure TechCentrix module
 
 You can configure TechCentrix module by passing [Swift struct](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html) to our SDK.
@@ -100,7 +112,6 @@ Images| Image configuration struct for images used within the SDK. [More here.](
 Item | Description
 --- | ---
 Colors.primary | Primary color, that is used across the app
-Colors.secondary | Secondary color, that is used across the app
 
 #### Images
 
@@ -114,7 +125,7 @@ productImagePairingOnOff | Name of an image, that is used on a pairing screen wi
 Example:
 
 ```
-let colors: TechCentrixSDK.Configuration.Colors = TechCentrixSDK.Configuration.Colors(primary: UIColor.yourPrimaryColor, secondary: UIColor.yourSecondaryColor)
+let colors: TechCentrixSDK.Configuration.Colors = TechCentrixSDK.Configuration.Colors(primary: UIColor.yourPrimaryColor)
 let images: TechCentrixSDK.Configuration.Images = TechCentrixSDK.Configuration.Images(product: UIImage(named: "productImage"),
 												productAdd: UIImage(named: "productImageAddNew"),
 												pairing1: UIImage(named: "productImagePairing"),

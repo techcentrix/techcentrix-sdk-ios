@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let colors: TechCentrixSDK.Configuration.Colors = TechCentrixSDK.Configuration.Colors(primary: UIColor.red, secondary: UIColor.purple)
+		let colors: TechCentrixSDK.Configuration.Colors = TechCentrixSDK.Configuration.Colors(primary: UIColor.red)
 		let images: TechCentrixSDK.Configuration.Images = TechCentrixSDK.Configuration.Images()
 		
 		let configuration: TechCentrixSDK.Configuration = TechCentrixSDK.Configuration(apiToken: "API TOKEN", hostName: "Example", colors: colors, images: images)

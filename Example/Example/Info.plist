@@ -22,6 +22,8 @@
 	<string>NO</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Description</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Description</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>

@@ -1,118 +1,112 @@
 PODS:
   - Bluejay (0.8.5):
     - XCGLogger (~> 7.0.0)
-  - Bolts (1.9.0):
-    - Bolts/AppLinks (= 1.9.0)
-    - Bolts/Tasks (= 1.9.0)
-  - Bolts/AppLinks (1.9.0):
-    - Bolts/Tasks
-  - Bolts/Tasks (1.9.0)
-  - CHIPageControl/Jalapeno (0.1.8)
+  - CHIPageControl/Jalapeno (0.2)
   - Device (3.1.2)
-  - FacebookCore (0.6.0):
-    - Bolts (~> 1.9)
-    - FBSDKCoreKit (~> 4.43)
-  - FacebookLogin (0.6.0):
-    - Bolts (~> 1.9)
-    - FacebookCore (~> 0.5)
-    - FBSDKCoreKit (~> 4.43)
-    - FBSDKLoginKit (~> 4.43)
-  - FBSDKCoreKit (4.44.1):
-    - Bolts (~> 1.9)
-  - FBSDKLoginKit (4.44.1):
-    - FBSDKCoreKit
-  - Firebase/Core (6.5.0):
+  - Firebase/Core (6.9.0):
     - Firebase/CoreOnly
-    - FirebaseAnalytics (= 6.0.4)
-  - Firebase/CoreOnly (6.5.0):
-    - FirebaseCore (= 6.1.0)
-  - Firebase/Messaging (6.5.0):
+    - FirebaseAnalytics (= 6.1.2)
+  - Firebase/CoreOnly (6.9.0):
+    - FirebaseCore (= 6.3.0)
+  - Firebase/Messaging (6.9.0):
     - Firebase/CoreOnly
-    - FirebaseMessaging (~> 4.1.1)
-  - FirebaseAnalytics (6.0.4):
-    - FirebaseCore (~> 6.1)
+    - FirebaseMessaging (~> 4.1.4)
+  - FirebaseAnalytics (6.1.2):
+    - FirebaseCore (~> 6.3)
     - FirebaseInstanceID (~> 4.2)
-    - GoogleAppMeasurement (= 6.0.4)
+    - GoogleAppMeasurement (= 6.1.2)
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
     - GoogleUtilities/Network (~> 6.0)
     - "GoogleUtilities/NSData+zlib (~> 6.0)"
     - nanopb (~> 0.3)
-  - FirebaseAnalyticsInterop (1.2.0)
-  - FirebaseCore (6.1.0):
-    - GoogleUtilities/Environment (~> 6.0)
-    - GoogleUtilities/Logger (~> 6.0)
-  - FirebaseInstanceID (4.2.2):
+  - FirebaseAnalyticsInterop (1.4.0)
+  - FirebaseCore (6.3.0):
+    - FirebaseCoreDiagnostics (~> 1.0)
+    - FirebaseCoreDiagnosticsInterop (~> 1.0)
+    - GoogleUtilities/Environment (~> 6.2)
+    - GoogleUtilities/Logger (~> 6.2)
+  - FirebaseCoreDiagnostics (1.1.0):
+    - FirebaseCoreDiagnosticsInterop (~> 1.0)
+    - GoogleDataTransportCCTSupport (~> 1.0)
+    - GoogleUtilities/Environment (~> 6.2)
+    - GoogleUtilities/Logger (~> 6.2)
+  - FirebaseCoreDiagnosticsInterop (1.0.0)
+  - FirebaseInstanceID (4.2.5):
     - FirebaseCore (~> 6.0)
     - GoogleUtilities/Environment (~> 6.0)
     - GoogleUtilities/UserDefaults (~> 6.0)
-  - FirebaseMessaging (4.1.1):
-    - FirebaseAnalyticsInterop (~> 1.1)
-    - FirebaseCore (~> 6.0)
+  - FirebaseMessaging (4.1.5):
+    - FirebaseAnalyticsInterop (~> 1.3)
+    - FirebaseCore (~> 6.2)
     - FirebaseInstanceID (~> 4.1)
     - GoogleUtilities/AppDelegateSwizzler (~> 6.2)
     - GoogleUtilities/Environment (~> 6.2)
     - GoogleUtilities/Reachability (~> 6.2)
     - GoogleUtilities/UserDefaults (~> 6.2)
     - Protobuf (~> 3.1)
-  - FTLinearActivityIndicator (1.2.1)
-  - GoogleAppMeasurement (6.0.4):
+  - FTLinearActivityIndicator (1.3)
+  - GoogleAppMeasurement (6.1.2):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
     - GoogleUtilities/Network (~> 6.0)
     - "GoogleUtilities/NSData+zlib (~> 6.0)"
     - nanopb (~> 0.3)
-  - GoogleUtilities/AppDelegateSwizzler (6.2.3):
+  - GoogleDataTransport (2.0.0)
+  - GoogleDataTransportCCTSupport (1.1.0):
+    - GoogleDataTransport (~> 2.0)
+    - nanopb
+  - GoogleUtilities/AppDelegateSwizzler (6.3.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
     - GoogleUtilities/Network
-  - GoogleUtilities/Environment (6.2.3)
-  - GoogleUtilities/Logger (6.2.3):
+  - GoogleUtilities/Environment (6.3.0)
+  - GoogleUtilities/Logger (6.3.0):
     - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (6.2.3):
+  - GoogleUtilities/MethodSwizzler (6.3.0):
     - GoogleUtilities/Logger
-  - GoogleUtilities/Network (6.2.3):
+  - GoogleUtilities/Network (6.3.0):
     - GoogleUtilities/Logger
     - "GoogleUtilities/NSData+zlib"
     - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (6.2.3)"
-  - GoogleUtilities/Reachability (6.2.3):
+  - "GoogleUtilities/NSData+zlib (6.3.0)"
+  - GoogleUtilities/Reachability (6.3.0):
     - GoogleUtilities/Logger
-  - GoogleUtilities/UserDefaults (6.2.3):
+  - GoogleUtilities/UserDefaults (6.3.0):
     - GoogleUtilities/Logger
-  - Kingfisher (5.7.0)
+  - Kingfisher (5.7.1)
   - Locksmith (4.0.0)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
-  - NVActivityIndicatorView (4.7.0):
-    - NVActivityIndicatorView/Presenter (= 4.7.0)
-  - NVActivityIndicatorView/Presenter (4.7.0)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - Protobuf (3.9.0)
+  - Protobuf (3.9.2)
   - Pulsator (0.6.0)
   - ReachabilitySwift (4.3.1)
+  - SPStorkController (1.7.9)
   - SwiftGen (6.1.0)
-  - SwiftLint (0.34.0)
-  - SwiftMessages (7.0.0):
-    - SwiftMessages/App (= 7.0.0)
-  - SwiftMessages/App (7.0.0)
-  - TechCentrixSDK (0.4.0):
+  - SwiftLint (0.35.0)
+  - SwiftMessages (7.0.1):
+    - SwiftMessages/App (= 7.0.1)
+  - SwiftMessages/App (7.0.1)
+  - TechCentrixSDK (0.6.0):
     - Bluejay
     - CHIPageControl/Jalapeno
     - Device
-    - FacebookCore (~> 0.6.0)
-    - FacebookLogin (~> 0.6.0)
     - FTLinearActivityIndicator
     - Kingfisher
     - Locksmith
     - NVActivityIndicatorView
     - Pulsator
     - ReachabilitySwift
+    - SPStorkController
     - SwiftGen
     - SwiftLint
     - SwiftMessages
@@ -129,21 +123,20 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Bluejay
-    - Bolts
     - CHIPageControl
     - Device
-    - FacebookCore
-    - FacebookLogin
-    - FBSDKCoreKit
-    - FBSDKLoginKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAnalyticsInterop
     - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseCoreDiagnosticsInterop
     - FirebaseInstanceID
     - FirebaseMessaging
     - FTLinearActivityIndicator
     - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - Kingfisher
     - Locksmith
@@ -153,6 +146,7 @@ SPEC REPOS:
     - Protobuf
     - Pulsator
     - ReachabilitySwift
+    - SPStorkController
     - SwiftGen
     - SwiftLint
     - SwiftMessages
@@ -164,39 +158,39 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   TechCentrixSDK:
-    :commit: 4a461589e95f4b284367069255fe6535369913b8
+    :commit: fc002302958e84c5aa3ea5908ef75f8666752677
     :git: "git@bitbucket.org:techcentrix/techcentrix-sdk-ios.git"
 
 SPEC CHECKSUMS:
   Bluejay: 1c109fe79f62acf9c8fea8d43159df3d0db6617c
-  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  CHIPageControl: 76b35c8309d8dd155e869c109cc6ffc0aaa465ff
+  CHIPageControl: a787bf7205c9b7e7fbfc412be36c5e8636b68f86
   Device: 62242076214c30fb5760174b3601cefafa70a481
-  FacebookCore: 38cd3a4078738d6f648eb9b6b9d35b02d693e9a1
-  FacebookLogin: 658b0569961a081a0890f5f4dbf69ced00657d9e
-  FBSDKCoreKit: a823ae35bdb60ebb8d7a7e51abe7c5d87d2bfced
-  FBSDKLoginKit: 54ae59987f2a8703021557c90a9aebb9e5c2bef6
-  Firebase: dedc9e48ea3f3649ad5f6b982f8a0c73508a14b5
-  FirebaseAnalytics: 3fb375bc9d13779add4039716f868d233a473fad
-  FirebaseAnalyticsInterop: efbe45c8385ec626e29f9525e5ebd38520dfb6c1
-  FirebaseCore: aecf02fb2274ec361b9bebeac112f5daa18273bd
-  FirebaseInstanceID: 662b8108a09fe9ed01aafdedba100fde8536b0f6
-  FirebaseMessaging: 6bb0bdaf64c55fef7a219b7bb1e94e94a0855ced
-  FTLinearActivityIndicator: a3ef57034bd05bc80c1a7c62c8797c0361fa7bee
-  GoogleAppMeasurement: 183bd916af7f80deb67c01888368f1108d641832
-  GoogleUtilities: d2b0e277a95962e09bb27f5cd42f5f0b6a506c7d
-  Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
+  Firebase: 2d750c54cda57d5a6ae31212cfe5cc813c6be7e4
+  FirebaseAnalytics: 5d9ccbf46ed25d3ec9304d263f85bddf1e93e2d2
+  FirebaseAnalyticsInterop: d48b6ab67bcf016a05e55b71fc39c61c0cb6b7f3
+  FirebaseCore: 8b2765c445d40db7137989b7146a3aa3f91b5529
+  FirebaseCoreDiagnostics: be4f7a09d02ab305f18de59a470412caddb64c2a
+  FirebaseCoreDiagnosticsInterop: 6829da2b8d1fc795ff1bd99df751d3788035d2cb
+  FirebaseInstanceID: 550df9be1f99f751d8fcde3ac342a1e21a0e6c42
+  FirebaseMessaging: b22b949cc45c14da01e60404dd7bffc78956380c
+  FTLinearActivityIndicator: c89ccc2ef18279a155820c0e81f09ce2e90a2dc9
+  GoogleAppMeasurement: 0ae90be1cc4dad40f4a27fc767ef59fa032ec87b
+  GoogleDataTransport: c8617c00e4f3eb9418e42ac0e8ac5241a9d555dd
+  GoogleDataTransportCCTSupport: 9f352523e8785a71f6754f51eeff09f49ec19268
+  GoogleUtilities: 9c2c544202301110b29f7974a82e77fdcf12bf51
+  Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
   Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
-  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
+  Protobuf: 67fb42ba613def994e61854de2b3164f13790cc4
   Pulsator: eb5a9f9be4bdcbd19903984c65deca6aabe50a17
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  SPStorkController: 36bd84206267232747b19d48852659bd71ede28f
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
-  SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
-  SwiftMessages: a952f7a9103d9aeab93730a2861d2d8fcdd8758f
-  TechCentrixSDK: 52af35bbd358e6615b374c957ab63a0860645c0e
+  SwiftLint: 5553187048b900c91aa03552807681bb6b027846
+  SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
+  TechCentrixSDK: 0f4196bac2df76a72f960a2c23fdd76b0961f4b3
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
 
 PODFILE CHECKSUM: dce6d64e4ceb1833f005768dbe1575ab8b0f0050
