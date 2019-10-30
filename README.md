@@ -119,8 +119,7 @@ Item | Description | Image  | Screenshot
 --- | --- | --- | ---
 productImage | Name of an image, that is used on a list of clips |  <img src="website/assets/productImage.png?raw=true" width="200"> | <img src="website/ProductImage.png?raw=true" width="200">
 productImageAddNew | Name of an image, that is used on a list of clips | <img src="website/assets/productImageAddNew.png?raw=true" width="200"> | <img src="website/ProductImageAddNew.png?raw=true" width="200">
-productImagePairing | Name of an image, that is used on a pairing screen | <img src="website/assets/productImagePairing.png?raw=true" width="200"> | <img src="website/ProductImagePairing.png?raw=true" width="200">
-productImagePairingOnOff | Name of an image, that is used on a pairing screen with zoomed On/Off button | <img src="website/assets/productImagePairingOnOff.png?raw=true" width="200"> | <img src="website/ProductImagePairingOnOff.png?raw=true" width="200">
+productImagePairingOnOff | Name of an image, that is used on a pairing screen with zoomed ON/OFF button | <img src="website/assets/productImagePairingOnOff.png?raw=true" width="200"> | <img src="website/ProductImagePairingOnOff.png?raw=true" width="200">
 
 Example:
 
@@ -128,7 +127,6 @@ Example:
 let colors: TechCentrixSDK.Configuration.Colors = TechCentrixSDK.Configuration.Colors(primary: UIColor.yourPrimaryColor)
 let images: TechCentrixSDK.Configuration.Images = TechCentrixSDK.Configuration.Images(product: UIImage(named: "productImage"),
 												productAdd: UIImage(named: "productImageAddNew"),
-												pairing1: UIImage(named: "productImagePairing"),
 												pairing2: UIImage(named: "productImagePairingOnOff"))
 let configuration: TechCentrixSDK.Configuration = TechCentrixSDK.Configuration(apiToken: "Mobile.API.Token", hostName: "The Bekan", productName: "Display", colors: colors, images: images)
 TechCentrixSDK.configure(with: configuration)
